@@ -1,4 +1,4 @@
-Joaosalless/Holiday
+Joaosalless/Holidays-BR
 ===================
 
 Joaosalless/Holiday é uma biblioteca Php que serve para verificar se existem feriados em uma determinada data. A biblioteca conta com todos os feriados nacionais incluindo os feriados de datas variáveis.
@@ -9,7 +9,7 @@ Esta biblioteca foi desenvolvida baseada no projeto [https://github.com/checkdom
 
 Requirements
 ------------
-Joaosalless/Holiday requires php >= 7.0.
+Joaosalless/Holidays-BR requires php >= 7.0.
 
 Usage
 -----
@@ -17,7 +17,15 @@ Para verificar se há feriados em uma determinada data, apenas instancie a class
 
 ```php
 $util    = new \Joaosalless\Holiday\Util();
-$holiday = $util->getHoliday('BR', '01.01.2018');
+
+// Feriado nacional
+$holiday = $util->getHoliday('BR', '01.01.2017');
+
+// Feriado estadual
+$holiday = $util->getHoliday('BR', '09.07.2017', 'SP');
+
+// Feriado municipal
+$holiday = $util->getHoliday('BR', '25.01.2017', 'SP', '3550308');
 ```
 
 Se você só precisa saber se há um feriado na sua data, também existe um método `isHoliday()`.

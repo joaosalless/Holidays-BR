@@ -1,6 +1,6 @@
 {
-    "name":         "joaosalless/holiday",
-    "description":  "Joaosalless/Holiday provides a simple class to get holidays for a specified country, state and city",
+    "name":         "joaosalless/holidays-br",
+    "description":  "Joaosalless/Holidays-BR provides a simple class to get holidays for a specified country, state and city",
     "keywords":     ["holiday"],
     "license":      "MIT",
     "authors": [
