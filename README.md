@@ -35,7 +35,117 @@ $util    = new \Joaosalless\Holiday\Util();
 $holiday = $util->isHoliday('BR', '01.01.2018');
 ```
 
-Se você precisa saber todos os feriados para um país, estado ou município específico, você pode instanciar um dos provedores incluídos e chamar o método `getHolidaysByYear()` . Todos os provedores devem seguir a interface `ProviderInterface` .
+Se você precisa saber todos os feriados para um país, estado ou município específico, você pode instanciar um dos provedores incluídos e chamar o método `getHolidaysByYear()`.
+
+Exemplo:
+
+```php
+$util     = new \Joaosalless\Holiday\Util();
+
+// Lista todos os feriados nacionais, estaduais e municipais (São Paulo - SP)
+$provider = $util->getProvider('BR', 'SP', '3550308');
+$holidays = $provider->getHolidaysByYear(2018);
+
+// Retorna o array de feriados:
+[
+    "01-01" => [
+        "name"   => "Dia Mundial da Paz",
+        "states" => null,
+        "cities" => null,
+    ],
+    "04-21" => [
+        "name"   => "Tiradentes",
+        "states" => null,
+        "cities" => null,
+    ],
+    "05-01" => [
+        "name"   => "Dia do Trabalhador",
+        "states" => null,
+        "cities" => null,
+    ],
+    "09-07" => [
+        "name"   => "Independência do Brasil",
+        "states" => null,
+        "cities" => null,
+    ],
+    "10-12" => [
+        "name"   => "Nossa Senhora Aparecida",
+        "states" => null,
+        "cities" => null,
+    ],
+    "11-02" => [
+        "name"   => "Finados",
+        "states" => null,
+        "cities" => null,
+    ],
+    "11-15" => [
+        "name"   => "Proclamação da República",
+        "states" => null,
+        "cities" => null,
+    ],
+    "12-25" => [
+        "name"   => "Natal",
+        "states" => null,
+        "cities" => null,
+    ],
+    "02-11" => [
+        "name"   => "Domingo de Carnaval",
+        "states" => null,
+        "cities" => null,
+    ],
+    "02-13" => [
+        "name"   => "Terça-feira de Carnaval",
+        "states" => null,
+        "cities" => null,
+    ],
+    "02-14" => [
+        "name"   => "Quarta-feira de Cinzas",
+        "states" => null,
+        "cities" => null,
+    ],
+    "03-30" => [
+        "name"   => "Paixão de Cristo",
+        "states" => null,
+        "cities" => null,
+    ],
+    "03-31" => [
+        "name"   => "Sábado de Aleluia",
+        "states" => null,
+        "cities" => null,
+    ],
+    "04-01" => [
+        "name"   => "Domingo de Páscoa",
+        "states" => null,
+        "cities" => null,
+    ],
+    "05-31" => [
+        "name"   => "Corpus Christi",
+        "states" => null,
+        "cities" => null,
+    ],
+    "07-09" => [
+        "name"   => "Revolução Constitucionalista de 1932",
+        "states" => [
+            "SP",
+        ],
+        "cities" => null,
+    ],
+    "01-25" => [
+        "name"   => "Aniversário de São Paulo",
+        "states" => null,
+        "cities" => [
+            "3550308",
+        ],
+    ],
+    "11-20" => [
+        "name"   => "Consciência Negra",
+        "states" => null,
+        "cities" => [
+            "3550308",
+        ],
+    ],
+]
+```
 
 Contributing
 ------------
