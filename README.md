@@ -11,6 +11,13 @@ Requirements
 ------------
 Joaosalless/Holidays-BR requires php >= 7.0.
 
+Install
+-------
+
+```bash
+composer require joaosalless/holidays-br
+```
+
 Usage
 -----
 Para verificar se há feriados em uma determinada data, apenas instancie a classe Util e chame o método `getHoliday()`.
