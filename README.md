@@ -1,6 +1,10 @@
 Joaosalless/Holidays-BR
 ===================
 
+[DEPRECATED]
+
+> Esta biblioteca será descontinuada. Utilize a minha outra biblioteca [https://github.com/joaosalless/dates] que possui feriados nacionais, estaduais e municipais, além de suportar datas comemorativas e cálculo automático de dias úteis e horário de expediente.
+
 Joaosalless/Holiday é uma biblioteca Php que serve para verificar se existem feriados em uma determinada data. A biblioteca conta com todos os feriados nacionais incluindo os feriados de datas variáveis.
 
 Esta biblioteca é modular. Os feriados Estaduais e municipais serão incluídos na medida do possível.
